@@ -1,3 +1,13 @@
+# Python artifacts:
+*.pyc
+
+# Eclipse IDE:
+.project
+.pydevproject
+
+# PyCharm
+.idea
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -17,13 +27,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# Mac directory info:
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -41,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Game-specific files and directories:
+preferences.json
+logs/
+screenshots/
+backups/
+contentpacks/
+toondata/
+panel_save.mp
