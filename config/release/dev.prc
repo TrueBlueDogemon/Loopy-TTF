@@ -2,7 +2,7 @@
 distribution dev
 
 # Art assets:
-model-path ../resources
+model-path ../Loopy-TTF-Resrc
 
 # Server:
 server-version fellowship-dev
