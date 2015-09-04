@@ -1,0 +1,20 @@
+The SOS goes as follows:
+* -1 (Not sure what this is...)
+* name
+* head (first letter is species, second is head shape, third is muzzle size)
+* torso
+* legs
+* gender
+* head color
+* glove color
+* arm color
+* leg color
+* toptex
+* toptexcolor
+* bottex
+* bottexcolor
+* sleevetex
+* sleevetexcolor
+* gender (again?)
+* 0 (not sure what this is)
+* NPC type (Regular should be used for SOS Cards)

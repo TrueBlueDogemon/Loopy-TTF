@@ -4,6 +4,7 @@ import string
 import sys, os
 
 import ToonDNA
+import NPCsList
 from toontown.hood import ZoneUtil
 from toontown.nametag import NametagGlobals
 from toontown.toonbase import TTLocalizer
@@ -240,7 +241,7 @@ def isZoneProtected(zoneId):
     return 0
 
 
-lnames = TTLocalizer.NPCToonNames
+lnames = NPCsList.NPCToonNames
 NPCToonDict = {20000: (-1,
          lnames[20000],
          ('dls',
@@ -11591,7 +11592,26 @@ NPCToonDict = {20000: (-1,
          11),
         'm',
         0,
-        NPC_REGULAR)}
+        NPC_REGULAR),
+99000: (-1,
+		lnames[99000],
+		('fsl',
+		'l',
+		'l',
+		'm',
+		15,
+		10,
+		15,
+		15,
+		0,
+		10,
+		0,
+		10,
+		0,
+		10),
+		'm',
+		0,
+		NPC_REGULAR)}
 
 if config.GetBool('want-new-toonhall', 1):
     NPCToonDict[2001] = (2513,
@@ -11720,6 +11740,10 @@ HQnpcFriends = {2001: (ToontownBattleGlobals.HEAL_TRACK,
          6,
          1,
          0),
+99000: (ToontownBattleGlobals.DROP_TRACK,
+		3,
+		150,
+		5),
  4219: (ToontownBattleGlobals.SOUND_TRACK,
         5,
         50,

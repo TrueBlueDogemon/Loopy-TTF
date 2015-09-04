@@ -47,6 +47,7 @@ from toontown.racing import RaceGlobals
 from toontown.shtiker import CogPageGlobals
 from toontown.suit import SuitDNA
 from toontown.toon import NPCToons
+from toontown.toon import NPCsList
 from toontown.toonbase import TTLocalizer
 from toontown.toonbase import ToontownAccessAI
 from toontown.toonbase import ToontownBattleGlobals
@@ -4520,7 +4521,7 @@ def sos(count, name):
     invoker = spellbook.getInvoker()
     if not 0 <= count <= 100:
         return 'Your SOS count must be in range (0-100).'
-    for npcId, npcName in TTLocalizer.NPCToonNames.items():
+    for npcId, npcName in NPCsList.NPCToonNames.items():
         if name.lower() == npcName.lower():
             if npcId not in NPCToons.npcFriends:
                 continue
