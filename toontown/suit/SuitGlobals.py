@@ -15,9 +15,9 @@ cSize = 4.14 # Size of body type 'c'
 ColdCallerHead = VBase4(0.25, 0.35, 1.0, 1.0) # Head used by Cold Caller
 
             # Bossbots
-suitProperties = {'f': (4.0 / cSize, SuitDNA.corpPolyColor, ['movershaker', 'glasses'], '', 4.88),
+suitProperties = {'f': (4.0 / cSize, SuitDNA.corpPolyColor, ['flunky', 'glasses'], '', 4.88),
                   'p': (4.0 / bSize, SuitDNA.corpPolyColor, ['pencilpusher'], '', 5.0),
-                  'ym': (4.5 / aSize, SuitDNA.corpPolyColor, ['tightwad', 'glasses'], '', 5.28),
+                  'ym': (4.5 / aSize, SuitDNA.corpPolyColor, ['yesman'], '', 5.28),
                   'mm': (3.0 / cSize, SuitDNA.corpPolyColor, ['micromanager'], '', 3.25),
                   'ds': (6.0 / bSize, SuitDNA.corpPolyColor, ['beancounter'], '', 6.08),
                   'hh': (7.5 / aSize, SuitDNA.corpPolyColor, ['headhunter'], '', 7.45),
@@ -27,7 +27,7 @@ suitProperties = {'f': (4.0 / cSize, SuitDNA.corpPolyColor, ['movershaker', 'gla
                   'bf': (4.0 / cSize, SuitDNA.legalPolyColor, ['tightwad'], 'bottom-feeder.jpg', 4.81),
                   'b': (4.375 / bSize, VBase4(0.95, 0.95, 1.0, 1.0), ['movershaker'], 'blood-sucker.jpg', 6.17),
                   'dt': (4.25 / aSize, SuitDNA.legalPolyColor, ['twoface'], '', 5.63),
-                  'ac': (4.35 / bSize, SuitDNA.legalPolyColor, ['numbercruncher'], 'bottom-feeder.jpg', 6.39),
+                  'ac': (4.35 / bSize, SuitDNA.legalPolyColor, ['ambulancechaser'], '', 6.39),
                   'bs': (4.5 / aSize, SuitDNA.legalPolyColor, ['backstabber'], '', 6.71),
                   'sd': (7.0 / bSize, VBase4(0.5, 0.8, 0.75, 1.0), ['telemarketer'], 'spin-doctor.jpg', 7.9),
                   'le': (8.5 / aSize, VBase4(0.25, 0.25, 0.5, 1.0), ['legaleagle'], '', 8.27),
