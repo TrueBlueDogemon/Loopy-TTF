@@ -18,3 +18,9 @@ The SOS goes as follows:
 * gender (again?)
 * 0 (not sure what this is)
 * NPC type (Regular should be used for SOS Cards)
+
+SOS Card definition:
+ID: (ToontownBattleGlobals.INSERT_TRACK,
+	gag level,
+	damage,
+	rarity)
