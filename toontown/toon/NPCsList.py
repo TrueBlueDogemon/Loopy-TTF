@@ -663,4 +663,5 @@ NPCToonNames = {20000: 'Tutorial Tom',
  99001: 'Master Loopy',
  99002: 'Rigby',
  99003: 'Little Cat',
- 99004: 'Oreo'}
+ 99004: 'Oreo',
+ 99005: 'Toonbrine'}
