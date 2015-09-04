@@ -2,6 +2,7 @@ from direct.gui.DirectGui import *
 from direct.directnotify import DirectNotifyGlobal
 from pandac.PandaModules import *
 import NPCToons
+import NPCsList
 import ToonHead
 import ToonDNA
 from toontown.toonbase import TTLocalizer
@@ -157,10 +158,11 @@ class NPCFriendCard(DirectFrame):
                 self.NPCHead.delete()
             if NPCID is None:
                 self.showBack()
+				
                 return
             self.front.show()
             self.back.hide()
-            self.NPCName['text'] = TTLocalizer.NPCToonNames[NPCID]
+            self.NPCName['text'] = NPCsList.NPCToonNames[NPCID]
             self.NPCHead = self.createNPCToonHead(NPCID, dimension=self.NPCHeadDim)
             self.NPCHead.reparentTo(self.front)
             self.NPCHead.setZ(self.NPCHeadPosZ)

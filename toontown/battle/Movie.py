@@ -27,6 +27,7 @@ from SuitBattleGlobals import *
 from toontown.chat.ChatGlobals import *
 from toontown.distributed import DelayDelete
 from toontown.toon import NPCToons
+from toontown.toon import NPCsList
 from toontown.toon import Toon
 from toontown.toonbase import TTLocalizer
 from toontown.toonbase import ToontownGlobals
@@ -358,7 +359,7 @@ class Movie(DirectObject.DirectObject):
         dnaList = ('dls', 'ms', 'm', 'm', 7, 0, 7, 7, 2, 6, 2, 6, 2, 16)
         dna.newToonFromProperties(*dnaList)
         self.tutorialTom.setDNA(dna)
-        self.tutorialTom.setName(TTLocalizer.NPCToonNames[20000])
+        self.tutorialTom.setName(NPCsList.NPCToonNames[20000])
         self.tutorialTom.setPickable(0)
         self.tutorialTom.setPlayerType(NametagGlobals.CCNonPlayer)
         self.tutorialTom.uniqueName = uniqueName

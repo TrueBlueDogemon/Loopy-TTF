@@ -9,6 +9,7 @@ from toontown.toonbase import ToontownGlobals
 from toontown.toonbase import TTLocalizer
 import types
 from toontown.toon import NPCToons
+from toontown.toon import NPCsList
 from toontown.toon import NPCFriendPanel
 from toontown.toonbase import ToontownBattleGlobals
 
@@ -91,9 +92,9 @@ class TownBattleSOSPanel(DirectFrame, StateData.StateData):
         return DirectButton(relief=None, text=friendName, text_scale=0.04, text_align=TextNode.ALeft, text_fg=fg, text1_bg=self.textDownColor, text2_bg=self.textRolloverColor, text3_fg=self.textDisabledColor, command=com, extraArgs=[friendId, friendName])
 
     def makeNPCFriendButton(self, NPCFriendId, numCalls):
-        if NPCFriendId not in TTLocalizer.NPCToonNames:
+        if NPCFriendId not in NPCsList.NPCToonNames:
             return None
-        friendName = TTLocalizer.NPCToonNames[NPCFriendId]
+        friendName = NPCsList.NPCToonNames[NPCFriendId]
         friendName += ' %d' % numCalls
         fg = Vec4(0.0, 0.0, 0.0, 1.0)
         return DirectButton(relief=None, text=friendName, text_scale=0.04, text_align=TextNode.ALeft, text_fg=fg, text1_bg=self.textDownColor, text2_bg=self.textRolloverColor, text3_fg=self.textDisabledColor, command=self.__choseNPCFriend, extraArgs=[NPCFriendId])
