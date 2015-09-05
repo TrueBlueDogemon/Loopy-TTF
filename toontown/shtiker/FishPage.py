@@ -271,7 +271,7 @@ class FishingTrophy(DirectFrame):
             self.bowlTop.setScale(2.0)
             self.nameLabel.show()
             self.__silver()
-        elif level >= 7:
+        elif level == 7:
             self.trophy.hide()
             self.bowl.show()
             self.bowlTop.setScale(2.25)

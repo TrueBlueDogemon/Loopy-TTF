@@ -30,7 +30,7 @@ Rod2JellybeanDict = {0: 10,
  2: 30,
  3: 75,
  4: 150}
-HealAmount = 1
+HealAmount = 3
 JellybeanFishingHolidayScoreMultiplier = 2
 MAX_RARITY = 10
 GlobalRarityDialBase = 3.9
@@ -304,14 +304,15 @@ FishFileDict = {-1: (4,
       0.4,
       -35,
       20)}
-FISH_PER_BONUS = 10
+FISH_PER_BONUS = 9
 TrophyDict = {0: (TTLocalizer.FishTrophyNameDict[0],),
  1: (TTLocalizer.FishTrophyNameDict[1],),
  2: (TTLocalizer.FishTrophyNameDict[2],),
  3: (TTLocalizer.FishTrophyNameDict[3],),
  4: (TTLocalizer.FishTrophyNameDict[4],),
  5: (TTLocalizer.FishTrophyNameDict[5],),
- 6: (TTLocalizer.FishTrophyNameDict[6],)}
+ 6: (TTLocalizer.FishTrophyNameDict[6],),
+ 7: (TTLocalizer.FishTrophyNameDict[7],)}
 WEIGHT_MIN_INDEX = 0
 WEIGHT_MAX_INDEX = 1
 RARITY_INDEX = 2
@@ -330,6 +331,10 @@ __fishDict = {0: ((1,
       5,
       5,
       (TTG.PunchlinePlace, TTG.TheBrrrgh)),
+	 (3,
+      8,
+      4,
+      (TTG.ToontownCentral, TTG.TheBrrrgh)),
      (3,
       5,
       3,
@@ -354,6 +359,10 @@ __fishDict = {0: ((1,
       6,
       3,
       (TTG.DaisyGardens, TTG.MyEstate)),
+	  (3,
+      18,
+      4,
+      (TTG.MyEstate, TTG.DonaldsDreamland)),
      (5,
       11,
       2,
@@ -377,7 +386,11 @@ __fishDict = {0: ((1,
  6: ((8,
       12,
       1,
-      (TTG.TheBrrrgh,)),),
+      (TTG.TheBrrrgh,)),
+	  (5,
+      16,
+      1,
+      (TTG.TheBrrrgh,))),
  8: ((1,
       5,
       1,
@@ -589,8 +602,12 @@ __fishDict = {0: ((1,
        (TTG.TheBrrrgh, TTG.DonaldsDreamland))),
  34: ((1,
        20,
+       8,
+       (TTG.DonaldsDreamland, Anywhere)),
+	  (1,
+       27,
        10,
-       (TTG.DonaldsDreamland, Anywhere)),)}
+       (TTG.MyEstate, TTG.DonaldsDreamland)),)}
 
 def getSpecies(genus):
     return __fishDict[genus]
@@ -604,10 +621,10 @@ ROD_WEIGHT_MIN_INDEX = 0
 ROD_WEIGHT_MAX_INDEX = 1
 ROD_CAST_COST_INDEX = 2
 __rodDict = {0: (0, 4, 1),
- 1: (0, 8, 2),
- 2: (0, 12, 3),
- 3: (0, 16, 4),
- 4: (0, 20, 5)}
+ 1: (0, 8, 1),
+ 2: (0, 16, 1),
+ 3: (0, 24, 1),
+ 4: (0, 32, 2)}
 
 def getNumRods():
     return len(__rodDict)

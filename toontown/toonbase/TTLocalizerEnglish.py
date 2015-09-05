@@ -4803,7 +4803,8 @@ FishTrophyNameDict = {0: 'Guppy',
  3: 'Flying Fish',
  4: 'Shark',
  5: 'Swordfish',
- 6: 'Killer Whale'}
+ 6: 'Killer Whale',
+ 7: 'Megalodon'}
 GardenPageTitle = 'Gardening'
 GardenPageTitleBasket = 'Flower Basket'
 GardenPageTitleCollection = 'Flower Album'
@@ -8553,6 +8554,7 @@ FishGenusNames = {0: 'Balloon Fish',
  34: 'Devil Ray'}
 FishSpeciesNames = {0: ('Balloon Fish',
      'Hot Air Balloon Fish',
+	 'Mylar Balloon Fish',
      'Weather Balloon Fish',
      'Water Balloon Fish',
      'Red Balloon Fish'),
@@ -8560,12 +8562,14 @@ FishSpeciesNames = {0: ('Balloon Fish',
      'Siamese Cat Fish',
      'Alley Cat Fish',
      'Tabby Cat Fish',
+	 'Calico Cat Fish',
      'Tom Cat Fish'),
  4: ('Clown Fish',
      'Sad Clown Fish',
      'Party Clown Fish',
      'Circus Clown Fish'),
- 6: ('Frozen Fish',),
+ 6: ('Frozen Fish',
+	 'Raw Frozen Fish'),
  8: ('Star Fish',
      'Five Star Fish',
      'Rock Star Fish',
@@ -8613,7 +8617,7 @@ FishSpeciesNames = {0: ('Balloon Fish',
       'Crunchy PB&J Fish',
       'Strawberry PB&J Fish',
       'Concord Grape PB&J Fish'),
- 34: ('Devil Ray',)}
+ 34: ('Devil Ray', 'Demonic Devil Ray')}
 CogPartNames = ('Upper Left Leg',
  'Lower Left Leg',
  'Left Foot',
