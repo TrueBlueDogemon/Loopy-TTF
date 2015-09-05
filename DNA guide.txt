@@ -27,7 +27,15 @@ Toon colors:
 12-
 13-
 14-
-15-
+15- Green
 16-
 17- Aqua
 18- Blue
+19-
+20-
+21-
+22-
+23-
+24-
+25- Gray
+26- Black (Cats only)

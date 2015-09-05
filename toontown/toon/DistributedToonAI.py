@@ -4366,8 +4366,8 @@ def maxHp(maxHp):
     """
     Modify the invoker's max HP.
     """
-    if not 15 <= maxHp <= ToontownGlobals.MaxHpLimit:
-        return 'HP must be in range (15-%d).' % ToontownGlobals.MaxHpLimit
+    if not 8 <= maxHp <= ToontownGlobals.MaxHpLimit:
+        return 'HP must be in range (8-%d).' % ToontownGlobals.MaxHpLimit
     invoker = spellbook.getTarget()
     invoker.b_setHp(maxHp)
     invoker.b_setMaxHp(maxHp)
@@ -4551,8 +4551,8 @@ def fires(count):
     Modifies the invoker's pink slip count.
     """
     invoker = spellbook.getInvoker()
-    if not 0 <= count <= 255:
-        return 'Your fire count must be in range (0-255).'
+    if not 0 <= count <= 300:
+        return 'Your fire count must be in range (0-300).'
     invoker.b_setPinkSlips(count)
     return 'You were given %d fires.' % count
 
@@ -4618,8 +4618,8 @@ def maxFishTank(maxFishTank):
     """
     Modify the target's max fish tank value.
     """
-    if not 20 <= maxFishTank <= 99:
-        return 'Max fish tank value must be in xrange (20-99).'
+    if not 20 <= maxFishTank <= 150:
+        return 'Max fish tank value must be in xrange (20-150).'
     target = spellbook.getTarget()
     target.b_setMaxFishTank(maxFishTank)
     return "Set %s's max fish tank value to %d!" % (target.getName(), maxFishTank)
