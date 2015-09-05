@@ -4607,8 +4607,8 @@ def fishingRod(rod):
     """
     Modify the target's fishing rod value.
     """
-    if not 0 <= rod <= 4:
-        return 'Rod value must be in xrange (0-4).'
+    if not 0 <= rod <= 5:
+        return 'Rod value must be in xrange (0-5).'
     target = spellbook.getTarget()
     target.b_setFishingRod(rod)
     return "Set %s's fishing rod to %d!" % (target.getName(), rod)
