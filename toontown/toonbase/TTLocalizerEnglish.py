@@ -8615,7 +8615,7 @@ FishSpeciesNames = {0: ('Balloon Fish',
       'Crunchy PB&J Fish',
       'Strawberry PB&J Fish',
       'Concord Grape PB&J Fish'),
- 34: ('Devil Ray')}
+ 34: ('Devil Ray', 'Demonic Devil Ray')}
 CogPartNames = ('Upper Left Leg',
  'Lower Left Leg',
  'Left Foot',
