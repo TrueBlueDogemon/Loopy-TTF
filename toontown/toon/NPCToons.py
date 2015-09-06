@@ -221,7 +221,7 @@ def createLocalNPC(npcId):
         dnaList = dnaType
     dna.newToonFromProperties(*dnaList)
     npc.setDNAString(dna.makeNetString())
-    npc.animFSM.request('neutral')
+	npc.animFSM.request('neutral')
     return npc
 
 # Some buildings don't have NPCs, so we need to store their zone IDs here:

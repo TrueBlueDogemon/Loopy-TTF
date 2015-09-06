@@ -377,7 +377,15 @@ __fishDict = {0: ((1,
  6: ((8,
       12,
       1,
-      (TTG.TheBrrrgh,)),),
+      (TTG.TheBrrrgh,)),
+	 (3,
+      8,
+      1,
+      (TTG.TheBrrrgh,)),
+	 (8,
+      15,
+      2,
+      (TTG.TheBrrrgh, TTG.ToontownCentral))),
  8: ((1,
       5,
       1,
@@ -488,7 +496,11 @@ __fishDict = {0: ((1,
       (14,
        20,
        7,
-       (TTG.MyEstate, TTG.DaisyGardens))),
+       (TTG.MyEstate, TTG.DaisyGardens)),
+	  (17,
+       26,
+       1,
+       (TTG.MyEstate, TTG.DaisyGardens)),),
  24: ((9,
        11,
        3,
@@ -589,11 +601,11 @@ __fishDict = {0: ((1,
        (TTG.TheBrrrgh, TTG.DonaldsDreamland))),
  34: ((1,
        20,
-       7,
+       5,
        (TTG.DonaldsDreamland, Anywhere)),
 	   (1,
        28,
-       10,
+       8,
        (TTG.DonaldsDreamland, TTG.MyEstate)),)}
 
 def getSpecies(genus):
@@ -703,8 +715,8 @@ def getRarity(genus, species):
 def getValue(genus, species, weight):
     rarity = getRarity(genus, species)
     rarityValue = pow(RARITY_VALUE_SCALE * rarity, 1.5)
-    weightValue = pow(WEIGHT_VALUE_SCALE * weight, 1.1)
-    value = OVERALL_VALUE_SCALE * (rarityValue + weightValue)
+    weightValue = pow(WEIGHT_VALUE_SCALE * weight, 1.5)
+    value = OVERALL_VALUE_SCALE * (rarityValue + weightValue) * 3
     finalValue = int(ceil(value))
     base = getBase()
     if hasattr(base, 'cr') and base.cr:

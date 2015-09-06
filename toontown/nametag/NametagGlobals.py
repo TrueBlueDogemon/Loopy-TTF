@@ -10,6 +10,7 @@ CCSuitBuilding = 5
 CCHouseBuilding = 6
 CCSpeedChat = 7
 CCFreeChat = 8
+CCBotPlayer = 9
 
 CHAT = 0
 SPEEDCHAT = 1
@@ -191,6 +192,12 @@ NametagColors = {
         (VBase4(0.2, 0.2, 0.5, 1.0), VBase4(0.2, 0.2, 0.2, 0.1875)),  # Down
         (VBase4(0.5, 0.5, 1.0, 1.0), VBase4(1.0, 1.0, 1.0, 0.5625)),  # Rollover
         (VBase4(0.3, 0.3, 0.7, 1.0), VBase4(0.8, 0.8, 0.8, 0.375))    # Disabled
+    ),
+	CCBotPlayer: (
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(0.8, 0.8, 0.8, 0.375)),   # Normal
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(0.2, 0.2, 0.2, 0.1875)),  # Down
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(1.0, 1.0, 1.0, 0.5625)),  # Rollover
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(0.8, 0.8, 0.8, 0.375))    # Disabled
     )
 }
 
@@ -245,6 +252,12 @@ ChatColors = {
         (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(1.0, 1.0, 1.0, 1.0))   # Disabled
     ),
     CCFreeChat: (
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Normal
+        (VBase4(1.0, 0.5, 0.5, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Down
+        (VBase4(0.0, 0.6, 0.6, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Rollover
+        (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(1.0, 1.0, 1.0, 1.0))   # Disabled
+    ),
+	CCBotPlayer: (
         (VBase4(0.0, 0.0, 0.0, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Normal
         (VBase4(1.0, 0.5, 0.5, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Down
         (VBase4(0.0, 0.6, 0.6, 1.0), VBase4(1.0, 1.0, 1.0, 1.0)),  # Rollover
