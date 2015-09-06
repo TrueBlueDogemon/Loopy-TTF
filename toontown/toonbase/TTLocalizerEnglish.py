@@ -4796,8 +4796,7 @@ FishingRodNameDict = {0: 'Twig',
  1: 'Bamboo',
  2: 'Hardwood',
  3: 'Steel',
- 4: 'Gold',
- 5: 'Diamond'}
+ 4: 'Gold'}
 FishTrophyNameDict = {0: 'Guppy',
  1: 'Minnow',
  2: 'Fish',
@@ -4913,7 +4912,7 @@ NPCForceAcknowledgeMessage6 = 'Great job defeating those Cogs!\n\n\n\n\n\n\n\n\n
 NPCForceAcknowledgeMessage7 = "Don't forget to make a friend!\n\n\n\n\n\n\nClick on another player and use the New Friend button."
 NPCForceAcknowledgeMessage8 = 'Great! You made a new friend!\n\n\n\n\n\n\n\n\nYou should go back at Toon Headquarters now.'
 NPCForceAcknowledgeMessage9 = 'Good job using the phone!\n\n\n\n\n\n\n\n\nReturn to Toon Headquarters to claim your reward.'
-ToonSleepString = '. . . ZZZ . . .'
+ToonSleepString = 'Z Z Z'
 MovieTutorialReward1 = 'You received 1 Throw point! When you get 10, you will get a new gag!'
 MovieTutorialReward2 = 'You received 1 Squirt point! When you get 10, you will get a new gag!'
 MovieTutorialReward3 = 'Good job! You completed your first ToonTask!'
