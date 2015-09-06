@@ -8,7 +8,7 @@ EnterMovie = 1
 ExitMovie = 2
 CastMovie = 3
 PullInMovie = 4
-CastTimeout = 45.0
+CastTimeout = 60.0
 Nothing = 0
 QuestItem = 1
 FishItem = 2
@@ -589,8 +589,12 @@ __fishDict = {0: ((1,
        (TTG.TheBrrrgh, TTG.DonaldsDreamland))),
  34: ((1,
        20,
+       7,
+       (TTG.DonaldsDreamland, Anywhere)),
+	   (1,
+       28,
        10,
-       (TTG.DonaldsDreamland, Anywhere)),)}
+       (TTG.DonaldsDreamland, TTG.MyEstate)),)}
 
 def getSpecies(genus):
     return __fishDict[genus]
@@ -605,9 +609,9 @@ ROD_WEIGHT_MAX_INDEX = 1
 ROD_CAST_COST_INDEX = 2
 __rodDict = {0: (0, 4, 1),
  1: (0, 8, 2),
- 2: (0, 12, 3),
- 3: (0, 16, 4),
- 4: (0, 20, 5)}
+ 2: (0, 16, 3),
+ 3: (0, 24, 4),
+ 4: (0, 32, 5)}
 
 def getNumRods():
     return len(__rodDict)

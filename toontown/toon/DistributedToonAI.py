@@ -4607,8 +4607,8 @@ def fishingRod(rod):
     """
     Modify the target's fishing rod value.
     """
-    if not 0 <= rod <= 5:
-        return 'Rod value must be in xrange (0-5).'
+    if not 0 <= rod <= 4:
+        return 'Rod value must be in xrange (0-4).'
     target = spellbook.getTarget()
     target.b_setFishingRod(rod)
     return "Set %s's fishing rod to %d!" % (target.getName(), rod)
@@ -4618,8 +4618,8 @@ def maxFishTank(maxFishTank):
     """
     Modify the target's max fish tank value.
     """
-    if not 20 <= maxFishTank <= 150:
-        return 'Max fish tank value must be in xrange (20-150).'
+    if not 20 <= maxFishTank <= 200:
+        return 'Max fish tank value must be in xrange (20-200).'
     target = spellbook.getTarget()
     target.b_setMaxFishTank(maxFishTank)
     return "Set %s's max fish tank value to %d!" % (target.getName(), maxFishTank)
@@ -5133,8 +5133,8 @@ def trackBonus(trackIndex):
     invoker = spellbook.getInvoker()
     if not 0 <= trackIndex < 7:
         return 'Invalid track index!'
-    trackBonusLevel = [0] * 7
-    trackBonusLevel[trackIndex] = 1
+    trackBonusLevel = [6] * 7
+    trackBonusLevel[trackIndex] = 6
     invoker.b_setTrackBonusLevel(trackBonusLevel)
     return 'Your track bonus level has been set!'
 
