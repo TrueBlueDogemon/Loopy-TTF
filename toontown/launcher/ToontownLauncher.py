@@ -7,7 +7,7 @@ ltime = 1 and time.localtime()
 logSuffix = '%02d%02d%02d_%02d%02d%02d' % (ltime[0] - 2000,  ltime[1], ltime[2],
                                            ltime[3], ltime[4], ltime[5])
 
-logfile = 'toontownD-' + logSuffix + '.log'
+logfile = 'challenging-' + logSuffix + '.log'
 
 class LogAndOutput:
     def __init__(self, orig, log):
@@ -65,7 +65,7 @@ class ToontownLauncher(LauncherBase):
             sys.exit()
 
         self.toontownBlueKey = 'TOONTOWN_BLUE'
-        self.toontownPlayTokenKey = 'TTI_PLAYCOOKIE'
+        self.toontownPlayTokenKey = 'TTC_PLAYCOOKIE'
         self.launcherMessageKey = 'LAUNCHER_MESSAGE'
         self.game1DoneKey = 'GAME1_DONE'
         self.game2DoneKey = 'GAME2_DONE'

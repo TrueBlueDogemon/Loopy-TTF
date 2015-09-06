@@ -5,13 +5,13 @@ import requests
 from pandac.PandaModules import *
 
 
-username = os.environ['ttiUsername']
-password = os.environ['ttiPassword']
+username = os.environ['ttcUsername']
+password = os.environ['ttcPassword']
 distribution = ConfigVariableString('distribution', 'dev').getValue()
 
 accountServerEndpoint = ConfigVariableString(
     'account-server-endpoint',
-    'https://toontownfellowship.com/api/').getValue()
+    '').getValue()
 request = requests.post(
     accountServerEndpoint + 'login/',
     data={'n': username, 'p': password, 'dist': distribution})
@@ -24,7 +24,7 @@ else:
     if not response['success']:
         print response['reason']
     else:
-        os.environ['TTI_PLAYCOOKIE'] = response['token']
+        os.environ['TTC_PLAYCOOKIE'] = response['token']
 
         # Start the game:
         import toontown.toonbase.ClientStart

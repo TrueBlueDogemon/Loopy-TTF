@@ -14,7 +14,7 @@ set BASE_CHANNEL=401000000
 echo District - %DISTRICT_NAME%
 
 echo ===============================
-echo Starting Toontown Dimensions District server...
+echo Starting Toontown Challenge District server...
 
 :main
 C:\Panda3D-1.9.0\python\ppython.exe -m toontown.ai.ServiceStart --base-channel %BASE_CHANNEL% ^

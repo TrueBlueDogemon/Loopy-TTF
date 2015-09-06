@@ -1,8 +1,8 @@
 # Window settings:
-window-title Toontown Fellowship
+window-title Toontown Challenging
 win-origin -1 -1
-icon-filename phase_3/etc/icon.ico
-cursor-filename phase_3/etc/toonmono.cur
+icon-filename 
+cursor-filename 
 
 # Audio:
 audio-library-name p3fmod_audio

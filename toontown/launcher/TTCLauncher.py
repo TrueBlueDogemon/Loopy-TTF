@@ -20,13 +20,13 @@ class LogAndOutput:
         self.log.flush()
         self.orig.flush()
 
-class TTILauncher(LauncherBase):
+class TTCLauncher(LauncherBase):
     notify = DirectNotifyGlobal.directNotify.newCategory('ToontownDummyLauncher')
 
     def __init__(self):
         self.http = HTTPClient()
 
-        self.logPrefix = 'fellowship-'
+        self.logPrefix = 'challenging-'
 
         ltime = 1 and time.localtime()
         logSuffix = '%02d%02d%02d_%02d%02d%02d' % (ltime[0] - 2000,  ltime[1], ltime[2],
@@ -46,10 +46,10 @@ class TTILauncher(LauncherBase):
         sys.stderr = logErr
 
     def getPlayToken(self):
-        return self.getValue('TTI_PLAYCOOKIE')
+        return self.getValue('TTC_PLAYCOOKIE')
 
     def getGameServer(self):
-        return self.getValue('TTI_GAMESERVER')
+        return self.getValue('TTC_GAMESERVER')
 
     def setPandaErrorCode(self, code):
         pass

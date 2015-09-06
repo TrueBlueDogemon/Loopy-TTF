@@ -2,10 +2,10 @@
 distribution dev
 
 # Art assets:
-model-path ../Loopy-TTF-Resrc
+model-path ../resources
 
 # Server:
-server-version fellowship-dev
+server-version challenging-dev
 min-access-level 600
 accountdb-type developer
 shard-low-pop 50

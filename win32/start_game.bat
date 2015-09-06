@@ -1,24 +1,21 @@
 @echo off
+
+title Toontown Challenge Game Client
+
 cd ..
 
-rem Read the contents of PPYTHON_PATH into %PPYTHON_PATH%:
-set /P PPYTHON_PATH=<PPYTHON_PATH
+set /P ttcUsername="Username: "
+set /P TTC_GAMESERVER="Gameserver (DEFAULT: 167.114.28.238): " || ^
+set TTC_GAMESERVER=167.114.28.238
 
-rem Get the user input:
-set /P ttiUsername="Username: "
-set /P TTI_GAMESERVER="Gameserver (DEFAULT: 167.114.28.238): " || ^
-set TTI_GAMESERVER=167.114.28.238
-
-rem Export the environment variables:
-set ttiPassword=password
-set TTI_PLAYCOOKIE=%ttiUsername%
+set ttcPassword=password
+set TTC_PLAYCOOKIE=%ttcUsername%
 
 echo ===============================
-echo Starting Toontown Fellowship...
-echo ppython: %PPYTHON_PATH%
-echo Username: %ttiUsername%
-echo Gameserver: %TTI_GAMESERVER%
+echo Starting Toontown Challenge Game Client...
+echo Username: %ttcUsername%
+echo Gameserver: %TTC_GAMESERVER%
 echo ===============================
 
-%PPYTHON_PATH% -m toontown.toonbase.ClientStart
+C:\Panda3D-1.9.0\python\ppython.exe -m toontown.toonbase.ClientStart
 pause

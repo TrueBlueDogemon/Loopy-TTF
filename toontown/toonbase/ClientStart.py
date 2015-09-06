@@ -85,8 +85,8 @@ import __builtin__
 try:
     launcher
 except:
-    from toontown.launcher.TTILauncher import TTILauncher
-    launcher = TTILauncher()
+    from toontown.launcher.TTCLauncher import TTCLauncher
+    launcher = TTCLauncher()
     __builtin__.launcher = launcher
 
 
@@ -132,7 +132,7 @@ import TTLocalizer
 from otp.otpbase import OTPGlobals
 OTPGlobals.setDefaultProductPrefix(TTLocalizer.ProductPrefix)
 if base.musicManagerIsValid:
-    music = base.loadMusic('phase_3/audio/bgm/ttf_theme.ogg')
+    music = base.loadMusic('phase_3/audio/bgm/challenging.ogg')
     if music:
         music.setLoop(1)
         music.setVolume(0.9)

@@ -403,7 +403,7 @@ class ToonBase(OTPBase.OTPBase):
             self.cleanupDownloadWatcher()
         else:
             self.acceptOnce('launcherAllPhasesComplete', self.cleanupDownloadWatcher)
-        gameServer = os.environ.get('TTI_GAMESERVER', 'localhost')
+        gameServer = os.environ.get('TTC_GAMESERVER', 'localhost')
         # Get the base port.
         serverPort = base.config.GetInt('server-port', 7199)
 
