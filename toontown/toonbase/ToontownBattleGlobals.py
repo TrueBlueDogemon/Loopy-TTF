@@ -750,6 +750,20 @@ def getDamageBonus(normal):
         bonus = 1
     return bonus
 
+def damageStrings():
+	damage = getAvPropDamage(damage)
+	if damage > 20 and damage <= 45:
+		return "OK"
+	if damage > 45 and damage <= 50:
+		return "Cool!"
+	if damage > 50 and damage <= 150:
+		return "Great!"
+	if damage > 150 and damage <= 299:
+		return "Fantastic!"
+	if damage > 300:
+		return "Astonishing!"
+	else:
+		return "No bonus"
 
 def isGroup(track, level):
     return AvPropTargetCat[AvPropTarget[track]][level]
