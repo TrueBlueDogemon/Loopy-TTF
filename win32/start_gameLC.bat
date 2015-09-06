@@ -5,8 +5,8 @@ title Toontown Challenge Game Client
 cd ..
 
 set /P ttcUsername="Username: "
-set /P TTC_GAMESERVER="Gameserver (DEFAULT: 167.114.28.238): " || ^
-set TTC_GAMESERVER=167.114.28.238
+set /P TTC_GAMESERVER="Gameserver (DEFAULT: littletooncat.es.vc): " || ^
+set TTC_GAMESERVER=littletooncat.es.vc
 
 set ttcPassword=password
 set TTC_PLAYCOOKIE=%ttcUsername%
