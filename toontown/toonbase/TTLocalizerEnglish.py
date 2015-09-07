@@ -444,6 +444,7 @@ QuestsLargeBag = 'Large Bag'
 QuestsSmallBackpack = 'Small Backpack'
 QuestsMediumBackpack = 'Medium Backpack'
 QuestsLargeBackpack = 'Large Backpack'
+QuestsInfinitePouch = 'Infinite Gag Pouch'
 QuestsItemDict = {1: ['Pair of Glasses', 'Pairs of Glasses', 'a '],
  2: ['Key', 'Keys', 'a '],
  3: ['Blackboard', 'Blackboards', 'a '],
@@ -464,6 +465,8 @@ QuestsItemDict = {1: ['Pair of Glasses', 'Pairs of Glasses', 'a '],
  18: ['Water', 'Waters', 'some '],
  19: ['Gear report', 'Gear reports', 'a '],
  20: ['Blackboard Eraser', 'Blackboard Erasers', 'a '],
+ 21: ['Power Source', 'Power Sources', 'a '],
+ 22: ['Real Power Source', 'Real Power Sources', 'a '],
  110: ['TIP Clothing Ticket', 'Clothing Tickets', 'a '],
  1000: ['Clothing Ticket', 'Clothing Tickets', 'a '],
  2001: ['Inner Tube', 'Inner Tubes', 'an '],
@@ -7724,7 +7727,7 @@ zone2TitleDict = {2513: ('Toon Hall', ''),
  2669: ("Muldoon's Maroon Balloons", ''),
  2670: ('Soup Forks', ''),
  2671: ('', ''),
- 2701: ('', ''),
+ 2701: ("Little Cat's Emerald Emporium", ''),
  2704: ('Movie Multiplex', ''),
  2705: ("Wiseacre's Noisemakers", ''),
  2708: ('Blue Glue', ''),
