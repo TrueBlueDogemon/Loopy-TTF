@@ -2,18 +2,18 @@
 cd ..
 
 # Get the user input:
-read -p "Username: " ttiUsername
+read -p "Username: " ttcUsername
 
 # Export the environment variables:
-export ttiUsername=$ttiUsername
-export ttiPassword="password"
-export TTI_PLAYCOOKIE=$ttiUsername
-export TTI_GAMESERVER="127.0.0.1"
+export ttcUsername=$ttcUsername
+export ttcPassword="password"
+export TTC_PLAYCOOKIE=$ttcUsername
+export TTC_GAMESERVER="127.0.0.1"
 
 echo "==============================="
-echo "Starting Toontown Fellowship"
-echo "Username: $ttiUsername"
-echo "Gameserver: $TTI_GAMESERVER"
+echo "Starting Toontown Challenge"
+echo "Username: $ttcUsername"
+echo "Gameserver: $TTC_GAMESERVER"
 echo "==============================="
 
 /usr/bin/python2 -m toontown.toonbase.ClientStart
