@@ -26,7 +26,7 @@ want-cogdominiums #f
 want-achievements #f
 
 # Chat:
-want-whitelist #t
+want-whitelist #f
 
 # Cashbot boss:
 want-resistance-toonup #t

@@ -45,6 +45,7 @@ from toontown.quest import QuestRewardCounter
 from toontown.quest import Quests
 from toontown.racing import RaceGlobals
 from toontown.shtiker import CogPageGlobals
+from toontown.suit import SuitBase
 from toontown.suit import SuitDNA
 from toontown.toon import NPCToons
 from toontown.toon import NPCsList
@@ -5166,8 +5167,8 @@ def track(command, track, value=None):
         return 'Set the experience of the %s track to: %d!' % (track, value)
     return 'Invalid command.'
 
-@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str, str])
-def suit(command, suitName):
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str, str, int])
+def suit(command, suitName, isSkeleton=0):
     invoker = spellbook.getInvoker()
     command = command.lower()
     if suitName not in SuitDNA.suitHeadTypes:

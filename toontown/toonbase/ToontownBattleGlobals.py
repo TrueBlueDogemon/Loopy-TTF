@@ -774,9 +774,7 @@ def getCreditMultiplier(floorIndex):
 
 
 def getFactoryCreditMultiplier(factoryId):
-    if factoryId == SellbotBrutalFactoryInt:
-        return 4.0
-    return 2.0
+    return 5.0
 
 
 def getFactoryMeritMultiplier(factoryId):

@@ -1,0 +1,41 @@
+def createNpcsInZone(air, zoneId):
+    npcs = []
+    canonicalZoneId = ZoneUtil.getCanonicalZoneId(zoneId)
+    npcIdList = zone2NpcDict.get(canonicalZoneId, [])
+    for npcId in npcIdList:
+        while npcIdList.count(npcId) > 1:
+            npcIdList.remove(npcId)
+    for i in xrange(len(npcIdList)):
+        npcId = npcIdList[i]
+        npcDesc = NPCToonDict.get(npcId)
+        if npcDesc[5] == NPC_FISHERMAN:
+            if not air.wantFishing:
+                continue
+        if npcDesc[5] == NPC_PARTYPERSON:
+            if not air.wantParties:
+                continue
+        if npcDesc[5] == NPC_SMART:
+            if not config.GetBool('want-talkative-tyler', False):
+                continue
+        npcs.append(createNPC(air, npcId, npcDesc, zoneId, posIndex=i))
+    return npcs
+	
+def npc(name, dnaType, gender, type):
+    import Toon
+    if npcId not in NPCToonDict:
+        return None
+    desc = NPCToonDict[npcId]
+    canonicalZoneId, name, dnaType, gender, protected, type = desc
+    npc = Toon.Toon()
+    npc.setName(name)
+    npc.setPickable(0)
+    npc.setPlayerType(NametagGlobals.CCNonPlayer)
+    dna = ToonDNA.ToonDNA()
+    if dnaType == 'r':
+        dnaList = getRandomDNA(npcId, gender)
+    else:
+        dnaList = dnaType
+    dna.newToonFromProperties(*dnaList)
+    npc.setDNAString(dna.makeNetString())
+    npc.animFSM.request('neutral')
+    return npc

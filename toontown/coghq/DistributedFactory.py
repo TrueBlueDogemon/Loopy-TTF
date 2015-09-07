@@ -161,7 +161,7 @@ class DistributedFactory(DistributedLevel.DistributedLevel, FactoryBase.FactoryB
         return cogSpecModule.BattleCells[battleCellId]
 
     def getFloorOuchLevel(self):
-        return 2
+        return 3
 
     def getGoonPathId(self):
         return 'sellbotFactory'
@@ -185,3 +185,14 @@ def factoryWarp(zoneNum):
         return 'You must be in a factory.'
     factory.warpToZone(zoneNum)
     return 'Warped to zone: %d' % zoneNum
+
+@magicWord(category=CATEGORY_PROGRAMMER, types=[int])
+def endGame():
+    """
+    Warp to the Center Silo Control Room.
+    """
+    factory = base.cr.doFind('DistributedFactory')
+    if (not factory) or (not isinstance(factory, DistributedFactory)):
+        return 'You must be in a factory.'
+    factory.warpToZone(32)
+    return 'Warped to the Foreman! Go get him!'

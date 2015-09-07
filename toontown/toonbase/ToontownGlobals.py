@@ -193,6 +193,7 @@ SellbotLobby = 11100
 SellbotFactoryExt = 11200
 SellbotFactoryInt = 11500
 SellbotBrutalFactoryInt = 11600
+SellbotImpossibleFactoryInt = 11700
 CashbotHQ = 12000
 CashbotLobby = 12100
 CashbotMintIntA = 12500
@@ -1684,11 +1685,11 @@ AV_TOUCH_COUNT_TIME = 300
 # Buffs...
 
 BMovementSpeed = 0
-BMovementSpeedMultiplier = 1.3
+BMovementSpeedMultiplier = 1.5
 BGagAccuracy = 1
-BGagAccuracyMultiplier = 1.3
+BGagAccuracyMultiplier = 1.5
 BGagExperience = 2
-BGagExperienceMultiplier = 1.5
+BGagExperienceMultiplier = 2.5
 
 
 # House catalog prices

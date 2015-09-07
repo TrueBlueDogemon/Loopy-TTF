@@ -69,7 +69,8 @@ DG_TIER = 7
 MM_TIER = 8
 BR_TIER = 11
 DL_TIER = 14
-ELDER_TIER = 18
+INFINITY_TIER = 18
+ELDER_TIER = 19
 LOOPING_FINAL_TIER = ELDER_TIER
 VISIT_QUEST_ID = 1000
 TROLLEY_QUEST_ID = 110
@@ -3357,10 +3358,14 @@ QuestDict = {
     9228: (DL_TIER + 3, Start, (SupervisorNewbieQuest, ToontownGlobals.CashbotMintIntB, 4, CASHBOT_HQ_NEWBIE_HP), Any, ToonHQ, 611, NA, DefaultDialog),
     9229: (DL_TIER + 3, Start, (SupervisorNewbieQuest, ToontownGlobals.CashbotMintIntC, 2, CASHBOT_HQ_NEWBIE_HP), Any, ToonHQ, 611, NA, DefaultDialog),
     9500: (DL_TIER + 3, Start, (CogQuest, ToontownGlobals.DonaldsDreamland, 1000, Any), Any, ToonHQ, NA, 9501, DefaultDialog),
-    9501: (DL_TIER + 3, Cont, (DeliverItemQuest, 1000), Any, 2004, 1000, NA, DefaultDialog),
-    10001: (ELDER_TIER, Start, (CogNewbieQuest, ToontownGlobals.ToontownCentral, 50, Any, NEWBIE_HP), Any, ToonHQ, Any, NA, DefaultDialog),
-    10002: (ELDER_TIER, Start, (BuildingNewbieQuest, Anywhere, 4, Any, 1, NEWBIE_HP), Any, ToonHQ, Any, NA, DefaultDialog),
-    10100: (ELDER_TIER, Start, (CogQuest, Anywhere, 80, Any), Any, ToonHQ, Any, NA, DefaultDialog),
+	9501: (DL_TIER + 3, Cont, (DeliverItemQuest, 1000), Any, 2004, 1000, NA, DefaultDialog),
+    10001: (ELDER_TIER, Start, (VisitQuest), Any, 99003, 605, 10002, TTLocalizer.ScavengerHuntDialogDict[10]),
+    10002: (ELDER_TIER, Cont, (VisitQuest), Any, 9228, 605, 10003, TTLocalizer.ScavengerHuntDialogDict[11]),
+	10003: (ELDER_TIER, Cont, (VisitQuest), Any, 99001, 605, 10004, TTLocalizer.ScavengerHuntDialogDict[12]),
+	10004: (ELDER_TIER, Cont, (VisitQuest), Any, 99007, 605, 10005, TTLocalizer.ScavengerHuntDialogDict[13]),
+    10005: (ELDER_TIER, Cont, (VisitQuest), Any, 3110, 605, 10006, TTLocalizer.ScavengerHuntDialogDict[14]),
+	10006: (ELDER_TIER, Cont, (VisitQuest), Any, ToonHQ, 208, NA, TTLocalizer.ScavengerHuntDialogDict[15]),
+	10100: (ELDER_TIER, Start, (CogQuest, Anywhere, 80, Any), Any, ToonHQ, Any, NA, DefaultDialog),
     10101: (ELDER_TIER, Start, (CogQuest, Anywhere, 100, Any), Any, ToonHQ, Any, NA, DefaultDialog),
     10102: (ELDER_TIER, Start, (CogQuest, Anywhere, 120, Any), Any, ToonHQ, Any, NA, DefaultDialog),
     10103: (ELDER_TIER, Start, (CogQuest, Anywhere, 200, Any), Any, ToonHQ, 613, NA, DefaultDialog),
@@ -4423,6 +4428,7 @@ RewardDict = {
     205: (MaxGagCarryReward, 60, TTLocalizer.QuestsSmallBackpack),
     206: (MaxGagCarryReward, 70, TTLocalizer.QuestsMediumBackpack),
     207: (MaxGagCarryReward, 80, TTLocalizer.QuestsLargeBackpack),
+	208: (MaxGagCarryReward, 255, TTLocalizer.QuestsInfinitePouch),
     300: (TeleportReward, ToontownGlobals.ToontownCentral),
     301: (TeleportReward, ToontownGlobals.DonaldsDock),
     302: (TeleportReward, ToontownGlobals.DaisyGardens),
@@ -4464,6 +4470,7 @@ RewardDict = {
     621: (MoneyReward, 1750),
     622: (MoneyReward, 2000),
     623: (MoneyReward, 2500),
+	624: (MoneyReward, 4000),
     700: (MaxMoneyReward, 50),
     701: (MaxMoneyReward, 60),
     702: (MaxMoneyReward, 80),

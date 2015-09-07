@@ -162,6 +162,7 @@ Office = 'Office'
 FactoryNames = {0: 'Factory Mockup',
  11500: 'Sellbot Cog Factory',
  11600: 'Brutal Sellbot Cog Factory',
+ 11700: 'Impossible Sellbot Factory',
  13300: 'Lawbot Cog Office'}
 FactoryTypeLeg = 'Leg'
 FactoryTypeArm = 'Arm'
@@ -457,7 +458,7 @@ QuestsItemDict = {1: ['Pair of Glasses', 'Pairs of Glasses', 'a '],
  10: ['Clown car tire', 'Clown car tires', 'a '],
  11: ['Air pump', 'Air pumps', 'an '],
  12: ['Octopus ink', 'Octopus inks', 'some '],
- 13: ['Package', 'Package', 'a '],
+ 13: ['Package', 'Packages', 'a '],
  14: ['Goldfish receipt', 'Goldfish receipts', 'a '],
  15: ['Goldfish', 'Goldfish', 'a '],
  16: ['Oil', 'Oils', 'some '],
@@ -467,6 +468,7 @@ QuestsItemDict = {1: ['Pair of Glasses', 'Pairs of Glasses', 'a '],
  20: ['Blackboard Eraser', 'Blackboard Erasers', 'a '],
  21: ['Power Source', 'Power Sources', 'a '],
  22: ['Real Power Source', 'Real Power Sources', 'a '],
+ 23: ['Lucky Banana', 'Lucky Bananas', 'a '],
  110: ['TIP Clothing Ticket', 'Clothing Tickets', 'a '],
  1000: ['Clothing Ticket', 'Clothing Tickets', 'a '],
  2001: ['Inner Tube', 'Inner Tubes', 'an '],
@@ -1881,6 +1883,29 @@ QuestDialogDict = {160: {GREETING: '',
          QUEST: 'You need to go tell Flippy about this...',
          INCOMPLETE_PROGRESS: 'Flippy can be found in Toon Hall',
          COMPLETE: 'A new type of Cog!\x07Good work!\x07Here is your final disguise part.'}}
+ScavengerHuntDialogDict = {10: {GREETING: '',
+							   QUEST: "Welcome to the Toontown Scavenger Hunt, _avName_!\x07Find the participating shopkeepers and win HUGE Jellybeans!\x07Are you ready?\x07Your first shopkeeper to find it Little Cat!",
+							   INCOMPLETE_WRONG_NPC: "This is not the Toon you seek, _avName_...",
+							   COMPLETE: "Hey there, _avName_! Have some Jellybeans!\x07There's still more shopkeepers to find, however.\x07I think Whispering Willow has something in mind for you...\x07No spoilers, though!",
+							   LEAVING: "Good luck on the scavenger hunt!"},
+						   11: {GREETING: '',
+								INCOMPLETE_WRONG_NPC: "I'm not Whispering Willow! Have you tried her shop in Donald's Dreamland yet?",
+								COMPLETE: "Hmm?\x07OH!\x07You must be the scavenger hunt participant, _avName_!\x07The Jellybeans are yours.\x07Now you must go find Master Loopy somewhere in Donald's Dock.",
+								LEAVING: "Good luck on the scavenger hunt!"},
+						   12: {GREETING: '',
+								INCOMPLETE_WRONG_NPC: "Loopy, you say? He's in Donald's Dock!",
+								COMPLETE: "WHAZZZUUUUUPPPPP!?\x07Ooooh, you must be here for the Jellybeans!\x07Here ya go!\x07My senses indicate that you should go find my buddy Professor Wilbur...",
+								LEAVING: "Hasta la pasta, _avName_!"},
+						   13: {GREETING: '',
+								INCOMPLETE_WRONG_NPC: "Professor Wilbur is over in Minnie's Melodyland!",
+								COMPLETE: "It's about phlippin' time I got theese stoopid device workeng!\x07Oh, heller there!\x07Beans er on the counter. Take 'em while I keep tinkerin'!\x07Oh yeah, and go find Chicken Boi!",
+								LEAVING: "Gud luck on teh scavenger hunt!"},
+						   14: {GREETING: '',
+								INCOMPLETE_WRONG_NPC: "Mmmm, Chicken Boy does make the best pea soup...",
+								COMPLETE: "Oh, hey! I got the Beans for you right here. I'm the last person on the list, so now you can head over to Toon HQ for the Grand Prize!"},
+						   15: {GREETING: '',
+								INCOMPLETE_WRONG_NPC: "Good job on the scavenger hunt, but Toon HQ is that-a-way!",
+								COMPLETE: "Wow, you completed the whole list?\x07Astounding!\x07Here is the GRAND PRIZE!"}}
 ChatGarblerDog = ['woof', 'arf', 'rruff']
 ChatGarblerCat = ['meow', 'mew']
 ChatGarblerMouse = ['squeak', 'squeaky', 'squeakity']
@@ -1914,7 +1939,7 @@ BossbotSkelP = 'Bossbot Skelecogs'
 LawbotSkelP = 'Lawbot Skelecogs'
 CashbotSkelP = 'Cashbot Skelecogs'
 SellbotSkelP = 'Sellbot Skelecogs'
-SkeleRevivePostFix = ' v2.0'
+SkeleRevivePostFix = ' VX'
 AvatarDetailPanelOK = lOK
 AvatarDetailPanelCancel = lCancel
 AvatarDetailPanelClose = lClose
@@ -7726,8 +7751,8 @@ zone2TitleDict = {2513: ('Toon Hall', ''),
  2667: ('Happy Times', ''),
  2669: ("Muldoon's Maroon Balloons", ''),
  2670: ('Soup Forks', ''),
- 2671: ('', ''),
- 2701: ("Little Cat's Emerald Emporium", ''),
+ 2671: ("Derp Cafe", ''),
+ 2701: ('', ''),
  2704: ('Movie Multiplex', ''),
  2705: ("Wiseacre's Noisemakers", ''),
  2708: ('Blue Glue', ''),
@@ -7743,7 +7768,7 @@ zone2TitleDict = {2513: ('Toon Hall', ''),
  2728: ('Vanishing Cream', ''),
  2729: ('14 Karat Goldfish', ''),
  2730: ('News for the Amused', ''),
- 2731: ('', ''),
+ 2731: ("Derpy Joe's Queer Theater", ''),
  2732: ('Spaghetti and Goofballs', ''),
  2733: ('Cast Iron Kites', ''),
  2734: ('Suction Cups and Saucers', ''),
@@ -7757,7 +7782,7 @@ zone2TitleDict = {2513: ('Toon Hall', ''),
  2747: ('Visible Ink', ''),
  2748: ('Jest for Laughs', ''),
  2801: ('Sofa Whoopee Cushions', ''),
- 2802: ('Inflatable Wrecking Balls', ''),
+ 2802: ("Little Cat's Emerald Emporium", ''),
  2803: ('The Karnival Kid', ''),
  2804: ('Dr. Pulyurleg, Chiropractor', ''),
  2805: ('', ''),
@@ -9622,6 +9647,7 @@ ElevatorBrutalSellBotBoss = 'Brutal Sellbot Towers'
 ElevatorSellBotFactory0 = 'Front Entrance'
 ElevatorSellBotFactory1 = 'Side Entrance'
 ElevatorSellBotFactory2 = 'Brutal Front Entrance'
+ElevatorSellbotFactory3 = 'Impossible Front Entrance'
 ElevatorLawBotBoss = 'Lawbot Courthouse'
 ElevatorLawBotCourse0 = 'Office A'
 ElevatorLawBotCourse1 = 'Office B'
