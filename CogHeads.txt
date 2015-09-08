@@ -1,0 +1,12 @@
+def cogHead(type, cogId):
+    if type == 'a':
+        cogHeadPath = 'phase_4/models/chars/suitA-heads'
+        if cogId == 'ym':
+            cogHeadNode =
+    if type == 'b':
+        cogHeadPath = 'phase_4/models/chars/suitB-heads'
+    if type == 'c':
+        cogHeadPath = 'phase_4/models/chars/suitC-heads'
+    else:
+        return 'Invalid type!'
+    

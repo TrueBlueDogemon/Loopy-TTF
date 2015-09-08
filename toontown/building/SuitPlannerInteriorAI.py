@@ -72,6 +72,7 @@ class SuitPlannerInteriorAI:
                 activeDict['level'] = level
                 if self.randomRevives:
                     activeDict['revives'] = random.choice([0, 1])
+                    activeDict['skelecog'] = random.choice([0, 1])
                 else:
                     activeDict['revives'] = revives
                 activeDicts.append(activeDict)
@@ -90,6 +91,7 @@ class SuitPlannerInteriorAI:
                 reserveDict['level'] = level
                 if self.randomRevives:
                     reserveDict['revives'] = random.choice([0, 1])
+                    reserveDict['skelecog'] = random.choice([0, 1])
                 else:
                     reserveDict['revives'] = revives
                 reserveDict['joinChance'] = joinChances[currReserve]

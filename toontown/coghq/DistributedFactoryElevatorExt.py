@@ -91,5 +91,7 @@ class DistributedFactoryElevatorExt(DistributedElevatorExt.DistributedElevatorEx
             return TTLocalizer.ElevatorSellBotFactory0
         elif self.entranceId == 1:
             return TTLocalizer.ElevatorSellBotFactory1
-        else:
+        elif self.entranceId == 2:
             return TTLocalizer.ElevatorSellBotFactory2
+        else:
+            return TTLocalizer.ElevatorSellbotFactory3

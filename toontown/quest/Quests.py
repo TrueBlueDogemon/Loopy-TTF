@@ -3402,8 +3402,8 @@ QuestDict = {
     10203: (ELDER_TIER, Cont, (DeliverItemQuest, 1000), Any, ToonTailor, 1000, NA, DefaultDialog),
     10204: (ELDER_TIER, Start, (CogNewbieQuest, ToontownGlobals.ToontownCentral, 60, Any, NEWBIE_HP), Any, ToonHQ, NA, 10205, DefaultDialog),
     10205: (ELDER_TIER, Cont, (DeliverItemQuest, 1000), Any, ToonTailor, 1000, NA, DefaultDialog),
-    10206: (ELDER_TIER, Start, (BuildingNewbieQuest, Anywhere, 4, Any, 1, NEWBIE_HP), Any, ToonHQ, NA, 10207, DefaultDialog),
-    10207: (ELDER_TIER, Cont, (DeliverItemQuest, 1000), Any, ToonTailor, 1000, NA, DefaultDialog) }
+    10206: (ELDER_TIER, Start, (BuildingNewbieQuest, Anywhere, 4, Any, 1, NEWBIE_HP), Any, ToonHQ, NA, NA, DefaultDialog),
+    10207: (ELDER_TIER, Start, (DeliverItemQuest, 23), Any, 99001, 999, NA, DefaultDialog)}
 
 if not config.GetBool('want-phone-quest', 1):
     QuestDict[150] = (TT_TIER, Cont, (FriendQuest,), Same, ToonHQ, 100, NA, DefaultDialog)

@@ -13,7 +13,7 @@ import re
 import Experience
 import InventoryBase
 import ModuleListAI
-from NPCToons import npcFriends
+from NPCToons import *
 import ToonDNA
 from otp.ai.AIBaseGlobal import *
 from otp.ai.MagicWordGlobal import *
@@ -4520,8 +4520,8 @@ def sos(count, name):
     Modifies the invoker's specified SOS card count.
     """
     invoker = spellbook.getInvoker()
-    if not 0 <= count <= 100:
-        return 'Your SOS count must be in range (0-100).'
+    if not 0 <= count <= 255:
+        return 'Your SOS count must be in range (0-255).'
     for npcId, npcName in NPCsList.NPCToonNames.items():
         if name.lower() == npcName.lower():
             if npcId not in NPCToons.npcFriends:
@@ -5092,6 +5092,63 @@ def resistanceRanger():
     target = spellbook.getTarget()
     target.b_setNametagStyle(6)
 
+@magicWord(category= CATEGORY_MODERATOR, types = [])
+def loopy():
+    """
+    Become Master Loopy Bananamuffin!
+    """
+    invoker = spellbook.getTarget()
+
+    dna = ToonDNA.ToonDNA()
+    dna.makeFromNetString(invoker.getDNAString())
+    
+    target = spellbook.getTarget()
+    target.b_setName('Master Loopy Clone')
+    
+    dna.headColor = 18
+    invoker.b_setDNAString(dna.makeNetString())
+    
+    dna.armColor = 18
+    invoker.b_setDNAString(dna.makeNetString())
+    
+    dna.legColor = 18
+    invoker.b_setDNAString(dna.makeNetString())
+    
+    dna.topTex = 0
+    invoker.b_setDNAString(dna.makeNetString())
+
+    dna.topTexColor = 27
+    invoker.b_setDNAString(dna.makeNetString())
+
+    dna.sleeveTex = 0
+    invoker.b_setDNAString(dna.makeNetString())
+
+    dna.sleeveTexColor = 27
+    invoker.b_setDNAString(dna.makeNetString())
+
+    dna.botTex = 1
+    invoker.b_setDNAString(dna.makeNetString())
+
+    dna.botTexColor = 3
+    invoker.b_setDNAString(dna.makeNetString())
+
+    target = spellbook.getTarget()
+    target.b_setNametagStyle(6)
+    return 'Welcome to the Dark Side.'
+
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[])
+def troll():
+    """
+    Try it and see...
+    """
+    invoker = spellbook.getTarget()
+
+    dna = ToonDNA.ToonDNA()
+    dna.makeFromNetString(invoker.getDNAString())
+    
+    dna.topTex = 21
+    invoker.b_setDNAString(dna.makeNetString())
+
 @magicWord(category=CATEGORY_ADMINISTRATOR, types=[int])
 def trophyScore(value):
     """
@@ -5377,3 +5434,29 @@ def captainTheGod():
     target.b_setNametagStyle(12)
 
     return 'You are now almost as godly as Captain.'
+
+"""
+@magicWord(category = CATEGORY_MODERATOR, types = [str, str, str])
+def spawnNPC(command, npcId, name):
+    if command == 'add':
+        if npcId == 'regular':
+            npcId = NPC_REGULAR
+        if npcId == 'clerk':
+            npcId = NPC_CLERK
+        npcs = []
+        npc = Toon.Toon()
+        npc.setName(name)
+        npc.setHp(15)
+        npc.setMaxHp(15)
+        npc.setPickable(1)
+        npc.setPlayerType(NametagGlobals.CCBotPlayer)
+        npc.generateWithRequired(zoneId)
+        dna = ToonDNA.ToonDNA()
+        dna.newToonRandom(self, seed = None, gender = random.choice(['m', 'f']), npc = 1)
+        npc.setDNAString(dna.makeNetString())
+        npc.animFSM.request('neutral')
+        npcs.append(createNPC(air, npcId, npcDesc, zoneId = ZoneUtil.getTrueZoneId(zoneId), posIndex=Point3(75, 75, 75)))
+    elif command.lower == 'remove':
+        npcs = []
+        return 'NPCs cleared!'
+"""
