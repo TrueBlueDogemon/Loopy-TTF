@@ -19,7 +19,7 @@ class SuitPlannerInteriorAI:
         self.numFloors = numFloors
         self.respectInvasions = 1
         self.randomRevives = randomRevives
-        dbg_defaultSuitName = simbase.config.GetString('suit-type', 'random')
+        dbg_defaultSuitName = simbase.config.GetString('suitType', 'random')
         if dbg_defaultSuitName == 'random':
             self.dbg_defaultSuitType = None
         else:
@@ -155,7 +155,7 @@ class SuitPlannerInteriorAI:
         newSuit = DistributedSuitAI.DistributedSuitAI(simbase.air, None)
         flags = self.__setupSuitInfo(newSuit, bldgTrack, suitLevel, suitType)
         if flags & IFSkelecog:
-            newSuit.setSkelecog(1)
+            newSuit.setSkelecog()
         newSuit.setSkeleRevives(revives)
         newSuit.generateWithRequired(suitZone)
         if flags & IFWaiter:
