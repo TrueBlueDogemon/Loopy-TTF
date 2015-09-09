@@ -299,7 +299,7 @@ class DistributedSuitPlannerAI(DistributedObjectAI.DistributedObjectAI, SuitPlan
         if suitName is None:
             suitDeptIndex, suitTypeIndex, flags = self.air.suitInvasionManager.getInvadingCog()
             skelecog = random.choice([0, 1])
-            revives = random.choice([0, 1])
+            revives = random.choice([0, 1, 2, 3])
             waiter = False
             if suitDeptIndex is not None:
                 suitTrack = SuitDNA.suitDepts[suitDeptIndex]

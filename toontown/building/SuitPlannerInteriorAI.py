@@ -71,7 +71,7 @@ class SuitPlannerInteriorAI:
                 activeDict['track'] = bldgTrack
                 activeDict['level'] = level
                 if self.randomRevives:
-                    activeDict['revives'] = random.choice([0, 1])
+                    activeDict['revives'] = random.choice([0, 1, 2])
                     activeDict['skelecog'] = random.choice([0, 1])
                 else:
                     activeDict['revives'] = revives

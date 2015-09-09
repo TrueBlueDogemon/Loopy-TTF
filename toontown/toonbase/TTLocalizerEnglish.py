@@ -1940,6 +1940,7 @@ LawbotSkelP = 'Lawbot Skelecogs'
 CashbotSkelP = 'Cashbot Skelecogs'
 SellbotSkelP = 'Sellbot Skelecogs'
 MegaSuitPreFix = 'Mega '
+NotSkeleRevivePostFix = ' VXR'
 SkeleRevivePostFix = ' VX'
 SkeleRevivePostFix2 = ' VX-2'
 SkeleRevivePostFix3 = ' VX-3'
@@ -5619,13 +5620,13 @@ WaiterInvasionBulletin1 = lToonHQ + ': There is a Cog invasion in progress!!!'
 WaiterInvasionBulletin2 = lToonHQ + ': The C.E.O. has fired all of his waiters!!!'
 WaiterInvasionBulletin3 = lToonHQ + ": The unemployed waiters are invading Toontown!!!"
 V2InvasionBegin1 = lToonHQ + ": Yikes!!! This isn't good, Toons!"
-V2InvasionBegin2 = lToonHQ + ': A major firmware update has been released to the Cogs!!!'
-V2InvasionBegin3 = lToonHQ + ': Version 2.0 Cogs have taken over Toontown!!!'
-V2InvasionEnd1 = lToonHQ + ': The version 2.0 Cog invasion has ended!!!'
+V2InvasionBegin2 = lToonHQ + ': A massive firmware update has been released to the Cogs!!!'
+V2InvasionBegin3 = lToonHQ + ': Version X Cogs have taken over Toontown!!!'
+V2InvasionEnd1 = lToonHQ + ': The version X Cog invasion has ended!!!'
 V2InvasionEnd2 = lToonHQ + ': The Toons have saved the day once again!!!'
 V2InvasionBulletin1 = lToonHQ + ': There is a Cog invasion in progress!!!'
 V2InvasionBulletin2 = lToonHQ + ': A major firmware update has been released to the Cogs!!!'
-V2InvasionBulletin3 = lToonHQ + ': Version 2.0 Cogs have taken over Toontown!!!'
+V2InvasionBulletin3 = lToonHQ + ': Version X Cogs have taken over Toontown!!!'
 LeaderboardTitle = 'Toon Platoon'
 QuestScriptTutorialMickey_1 = 'Toontown has a new citizen! Do you have some extra gags?'
 QuestScriptTutorialMickey_2 = 'Sure, %s!'
@@ -8471,7 +8472,7 @@ TipDict = {TIP_NONE: ('',),
               'Traps are only useful if you or your friends coordinate using Lure in battle.',
               'Higher level Lures are less likely to miss.',
               'Lower level gags have a lower accuracy against high level Cogs.',
-			  'Did you know that all Level 7 Gags have 100% accuracy?',
+              'Did you know that all Level 7 Gags have 100% accuracy?',
               'Cogs cannot attack once they have been lured in battle.',
               'When you and your friends defeat a Cog building, you are rewarded with portraits inside the rescued Toon Building.',
               'Using a Toon-Up gag on a Toon with a full Laff meter will not earn Toon-Up experience.',
@@ -8479,7 +8480,8 @@ TipDict = {TIP_NONE: ('',),
               'Drop gags have low chance of hitting, but accuracy is increased when Cogs are first hit by another gag in the same round.',
               'When you\'ve defeated enough Cogs, use the "Cog Radar" by clicking the Cog icons on the Cog Gallery page in your Shticker Book.',
               'During a battle, you can tell which Cog your teammates are attacking by looking at the dashes (-) and Xs.',
-              'During a battle, Cogs have a light on them that displays their health; green is healthy, red is nearly destroyed.',
+              'During a battle, Cogs have a light on them that displays their health; blue is healthy, red is nearly destroyed.',
+              'Watch out for the dreaded VX Cogs!',
               'A maximum of four Toons can battle at once.',
               'On the street, Cogs are more likely to join a fight against multiple Toons than just one Toon.',
               'The two most difficult Cogs of each type are only found in buildings.',
@@ -8488,8 +8490,9 @@ TipDict = {TIP_NONE: ('',),
               'Sound gags do not get bonus damage against lured Cogs.',
               'If you wait too long to attack a lured Cog, it will wake up. Higher level lures last longer.',
               'There are fishing ponds on every street in Toontown. Some streets have unique fish.',
-			  'Can you catch the legendary Demonic Devil Ray?',
-			  "Use the 'maxFishTank' magic word and set your fish bucket up to 200!"),
+              'Can you catch the legendary Demonic Devil Ray?',
+              'Can you catch the legendary Lord Fish?',
+              "Use the 'maxFishTank' magic word and set your fish bucket up to 255!"),
  TIP_MINIGAME: ('After you fill up your Jellybean jar, any Jellybeans you get from Trolley Games automatically spill over into your bank.',
                 'You can use the arrow keys instead of the mouse in the "Match Minnie" Trolley Game.',
                 'In the Cannon Game you can use the arrow keys to move your cannon and press the "Control" key to fire.',
@@ -8528,9 +8531,9 @@ TipDict = {TIP_NONE: ('',),
              'Wait until the C.F.O. is dizzy to throw a safe, or he will use it as a helmet! Hit the helmet with another safe to knock it off.',
              'Earn Lawbot disguise suit parts as rewards for completing ToonTasks for Professor Flake.',
              "It pays to be puzzled: the virtual Cogs in Lawbot HQ won't reward you with Jury Notices.",
-			 'Use the SOS button to call your favorite Shopkeepers into battle!',
-			 "If you would like to make an idea for an SOS Card, don't hesitate to contact Toontown Challenge staff with your idea!"
-			 'Coming soon to Toontown: Multi-Purpose SOS Cards! These can do more than a normal SOS card!'),
+             'Use the SOS button to call your favorite Shopkeepers into battle!',
+             "If you would like to make an idea for an SOS Card, don't hesitate to contact Toontown Challenge staff with your idea!",
+             'Coming soon to Toontown: Multi-Purpose SOS Cards! These can do more than a normal SOS card!'),
  TIP_ESTATE: ('Doodles can understand some SpeedChat phrases. Try them!',
               'Use the "Pet" SpeedChat menu to ask your Doodle to do tricks.',
               "You can teach Doodles tricks with training lessons from Clarabelle's Cattlelog.",
@@ -8625,7 +8628,8 @@ FishSpeciesNames = {0: ('Balloon Fish',
       'Bull Dog Fish',
       'Hot Dog Fish',
       'Dalmatian Dog Fish',
-      'Puppy Dog Fish'),
+      'Puppy Dog Fish',
+      'Scooby-Dooby Dog Fish'),
  14: ('Amore Eel', 'Electric Amore Eel'),
  16: ('Nurse Shark', 'Clara Nurse Shark', 'Florence Nurse Shark'),
  18: ('King Crab', 'Alaskan King Crab', 'Old King Crab'),

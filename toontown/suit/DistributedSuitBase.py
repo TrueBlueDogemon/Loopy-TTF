@@ -58,7 +58,7 @@ class DistributedSuitBase(DistributedAvatar.DistributedAvatar, Suit.Suit, SuitBa
         self.reparentTo(hidden)
         self.loop('neutral')
         self.skeleRevives = 0
-        self.maxSkeleRevives = 3
+        self.maxSkeleRevives = 0
         self.sillySurgeText = False
         self.interactivePropTrackBonus = -1
         return
@@ -70,17 +70,28 @@ class DistributedSuitBase(DistributedAvatar.DistributedAvatar, Suit.Suit, SuitBa
         return 0
 
     def setSkeleRevives(self, num):
-        num = random.choice([0, 1])
+        if num == None:
+            num = 0
         self.skeleRevives = num
-        if self.getSkeleRevives() > 0:
+        if self.getSkeleRevives() == 1:
             nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
              'dept': self.getStyleDept(),
              'level': '%s%s' % (self.getActualLevel(), TTLocalizer.SkeleRevivePostFix)}
             self.setDisplayName(nameInfo)
+        elif self.getSkeleRevives() == 2:
+            nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
+             'dept': self.getStyleDept(),
+             'level': '%s%s' % (self.getActualLevel(), TTLocalizer.SkeleRevivePostFix2)}
+            self.setDisplayName(nameInfo)
+        elif self.getSkeleRevives() == 3:
+            nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
+             'dept': self.getStyleDept(),
+             'level': '%s%s' % (self.getActualLevel(), TTLocalizer.SkeleRevivePostFix3)}
+            self.setDisplayName(nameInfo)
         else:
             nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
              'dept': self.getStyleDept(),
-             'level': (self.getActualLevel(), TTLocalizer.SkeleRevivePostFix)}
+             'level': self.getActualLevel()}
             self.setDisplayName(nameInfo)
         return
 

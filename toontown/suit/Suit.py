@@ -49,7 +49,10 @@ SuitsCEOBattle = (('sit', 'sit'),
  ('tray-walk', 'tray-walk'),
  ('tray-neutral', 'tray-neutral'),
  ('sit-lose', 'sit-lose'))
-f = (('throw-paper', 'throw-paper', 3.5), ('phone', 'phone', 3.5), ('shredder', 'shredder', 3.5))
+f = (('throw-paper', 'throw-paper', 3.5),
+ ('phone', 'phone', 3.5),
+ ('shredder', 'shredder', 3.5),
+ ('glower', 'glower', 5))
 p = (('pencil-sharpener', 'pencil-sharpener', 5),
  ('pen-squirt', 'pen-squirt', 5),
  ('hold-eraser', 'hold-eraser', 5),
@@ -318,16 +321,18 @@ def attachSuitHead(node, suitName):
 
 class Suit(Avatar.Avatar):
     __module__ = __name__
-    healthColors = (Vec4(0, 1, 0, 1),
+    healthColors = (Vec4(0, 0, 1, 1),
+     Vec4(0, 1, 0, 1),
      Vec4(1, 1, 0, 1),
-     Vec4(1, 0.5, 0, 1),
+     Vec4(1, 0.25, 0, 1),
      Vec4(1, 0, 0, 1),
-     Vec4(0.3, 0.3, 0.3, 1))
-    healthGlowColors = (Vec4(0.25, 1, 0.25, 0.5),
-     Vec4(1, 1, 0.25, 0.5),
-     Vec4(1, 0.5, 0.25, 0.5),
+     Vec4(0, 0, 0, 1))
+    healthGlowColors = (Vec4(0, 0, 1, 0.5),
+     Vec4(0, 1, 0, 0.5),
+     Vec4(1, 1, 0, 0.5),
+     Vec4(1, 0.25, 0, 0.5),
      Vec4(1, 0.25, 0.25, 0.5),
-     Vec4(0.3, 0.3, 0.3, 0))
+     Vec4(0, 0, 0, 0))
     medallionColors = {'c': Vec4(0.863, 0.776, 0.769, 1.0),
      's': Vec4(0.843, 0.745, 0.745, 1.0),
      'l': Vec4(0.749, 0.776, 0.824, 1.0),
@@ -629,13 +634,13 @@ class Suit(Avatar.Avatar):
         health = float(self.currHP) / float(self.maxHP)
         if health > 0.95:
             condition = 0
-        elif health > 0.7:
+        elif health > 0.75:
             condition = 1
-        elif health > 0.3:
+        elif health > 0.5:
             condition = 2
-        elif health > 0.05:
+        elif health > 0.2:
             condition = 3
-        elif health > 0.0:
+        elif health > 0.05:
             condition = 4
         else:
             condition = 5
@@ -643,7 +648,7 @@ class Suit(Avatar.Avatar):
             if condition == 4:
                 blinkTask = Task.loop(Task(self.__blinkRed), Task.pause(0.75), Task(self.__blinkGray), Task.pause(0.1))
                 taskMgr.add(blinkTask, self.uniqueName('blink-task'))
-            elif condition == 5:
+            if condition == 5:
                 if self.healthCondition == 4:
                     taskMgr.remove(self.uniqueName('blink-task'))
                 blinkTask = Task.loop(Task(self.__blinkRed), Task.pause(0.25), Task(self.__blinkGray), Task.pause(0.1))

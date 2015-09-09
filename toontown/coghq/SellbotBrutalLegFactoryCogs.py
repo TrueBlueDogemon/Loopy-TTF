@@ -1,4 +1,5 @@
 from SpecImports import *
+import random
 LobbyParent = 10014
 BoilerParent = 10030
 PipeLeftParent = 10023
@@ -17,6 +18,7 @@ WestSiloParent = 20094
 WestSiloBattleCellParent = 10047
 EastSiloParent = 20096
 EastSiloBattleCellParent = 10068
+LavaRoomFoyerBattleCellParent = 10999
 LobbyCell = 0
 BoilerCell = 1
 PipeLeftCell = 2
@@ -32,6 +34,7 @@ CenterSiloOutsideCell = 11
 PaintMixerStorageCell = 12
 EastCatwalkCell = 13
 WestCatwalkCell = 14
+LavaRoomFoyerCell = 15
 BattleCells = {LobbyCell: {'parentEntId': LobbyParent,
              'pos': Point3(0, 0, 0)},
  BoilerCell: {'parentEntId': BoilerParent,
@@ -61,6 +64,8 @@ BattleCells = {LobbyCell: {'parentEntId': LobbyParent,
  EastCatwalkCell: {'parentEntId': EastCatwalkParent,
                 'pos': Point3(0, 0, 0)},
  WestCatwalkCell: {'parentEntId': WestCatwalkParent,
+                'pos': Point3(0, 0, 0)},
+ LavaRoomFoyerCell: {'parentEntId': LavaRoomFoyerBattleCellParent,
                 'pos': Point3(0, 0, 0)}}
 CogData = [{'type': 'm',
   'parentEntId': LobbyParent,
@@ -94,7 +99,7 @@ CogData = [{'type': 'm',
   'behavior': 'chase',
   'path': 20079,
   'skeleton': 0,
-  'revives': 1},
+  'revives': random.choice([0, 1])},
  {'type': 'ms',
   'parentEntId': LobbyParent,
   'boss': 0,
@@ -216,7 +221,7 @@ CogData = [{'type': 'm',
   'path': 20103,
   'skeleton': 0,
   'revives': 1},
- {'type': 'tbc',
+ {'type': 'mh',
   'parentEntId': CenterSiloParent,
   'boss': 1,
   'level': 12,
@@ -226,7 +231,7 @@ CogData = [{'type': 'm',
   'behavior': 'stand',
   'path': None,
   'skeleton': 0,
-  'revives': 1},
+  'revives': random.choice([1, 2, 3])},
  {'type': 'tf',
   'parentEntId': CenterSiloParent,
   'boss': 0,
@@ -439,7 +444,7 @@ CogData = [{'type': 'm',
  {'type': 'm',
   'parentEntId': SigRoomParent,
   'boss': 0,
-  'level': 11,
+  'level': 10,
   'battleCell': SigRoomCell,
   'pos': Point3(5, 3.25, 0),
   'h': -90,
@@ -578,5 +583,38 @@ CogData = [{'type': 'm',
   'behavior': 'stand',
   'path': None,
   'skeleton': 0,
-  'revives': 1}]
+  'revives': 1},
+ {'type': 'gh',
+  'parentEntId': LavaRoomFoyerBattleCellParent,
+  'boss': 0,
+  'level': 8,
+  'battleCell': LavaRoomFoyerCell,
+  'pos': Point3(0, 15, 0),
+  'h': 0,
+  'behavior': 'stand',
+  'path': None,
+  'skeleton': 0,
+  'revives': 1},
+ {'type': 'tf',
+  'parentEntId': LavaRoomFoyerBattleCellParent,
+  'boss': 0,
+  'level': 10,
+  'battleCell': LavaRoomFoyerCell,
+  'pos': Point3(0, 0, 0),
+  'h': 0,
+  'behavior': 'stand',
+  'path': None,
+  'skeleton': 0,
+  'revives': 1},
+ {'type': 'ms',
+  'parentEntId': LavaRoomFoyerBattleCellParent,
+  'boss': 0,
+  'level': 9,
+  'battleCell': LavaRoomFoyerCell,
+  'pos': Point3(0, -15, 0),
+  'h': 0,
+  'behavior': 'stand',
+  'path': None,
+  'skeleton': 0,
+  'revives': 1},]
 ReserveCogData = [{}]
