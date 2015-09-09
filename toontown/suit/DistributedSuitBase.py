@@ -8,6 +8,7 @@ from direct.fsm import State
 from direct.interval.IntervalGlobal import *
 from direct.task import Task
 import math
+import random
 from pandac.PandaModules import *
 
 import DistributedSuitPlanner
@@ -57,7 +58,7 @@ class DistributedSuitBase(DistributedAvatar.DistributedAvatar, Suit.Suit, SuitBa
         self.reparentTo(hidden)
         self.loop('neutral')
         self.skeleRevives = 0
-        self.maxSkeleRevives = 0
+        self.maxSkeleRevives = 3
         self.sillySurgeText = False
         self.interactivePropTrackBonus = -1
         return
@@ -69,11 +70,8 @@ class DistributedSuitBase(DistributedAvatar.DistributedAvatar, Suit.Suit, SuitBa
         return 0
 
     def setSkeleRevives(self, num):
-        if num == None:
-            num = 0
+        num = random.choice([0, 1])
         self.skeleRevives = num
-        if num > self.maxSkeleRevives:
-            self.maxSkeleRevives = num
         if self.getSkeleRevives() > 0:
             nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
              'dept': self.getStyleDept(),
@@ -82,7 +80,7 @@ class DistributedSuitBase(DistributedAvatar.DistributedAvatar, Suit.Suit, SuitBa
         else:
             nameInfo = TTLocalizer.SuitBaseNameWithLevel % {'name': self.name,
              'dept': self.getStyleDept(),
-             'level': self.getActualLevel()}
+             'level': (self.getActualLevel(), TTLocalizer.SkeleRevivePostFix)}
             self.setDisplayName(nameInfo)
         return
 

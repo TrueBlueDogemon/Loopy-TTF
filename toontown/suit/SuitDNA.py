@@ -2,7 +2,6 @@ import random
 from pandac.PandaModules import *
 from direct.directnotify.DirectNotifyGlobal import *
 from toontown.toonbase import TTLocalizer
-import random
 from direct.distributed.PyDatagram import PyDatagram
 from direct.distributed.PyDatagramIterator import PyDatagramIterator
 from otp.avatar import AvatarDNA

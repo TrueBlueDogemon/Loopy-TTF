@@ -10,6 +10,7 @@ import SuitTimings
 from otp.ai.AIBaseGlobal import *
 from toontown.battle import BattleManagerAI
 from toontown.battle import SuitBattleGlobals
+from toontown.battle import MegaSuitBattleGlobals
 from toontown.building import HQBuildingAI
 from toontown.building import SuitBuildingGlobals
 from toontown.dna.DNAParser import DNASuitPoint
@@ -245,7 +246,7 @@ class DistributedSuitPlannerAI(DistributedObjectAI.DistributedObjectAI, SuitPlan
     def createNewSuit(self, blockNumbers, streetPoints, toonBlockTakeover=None,
             cogdoTakeover=None, minPathLen=None, maxPathLen=None,
             buildingHeight=None, suitLevel=None, suitType=None, suitTrack=None,
-            suitName=None, skelecog=None, revives=None, isVirtual=None, waiter=None):
+            suitName=None, skelecog=None, revives=None, waiter=None):
         startPoint = None
         blockNumber = None
         if self.notify.getDebug():
@@ -298,7 +299,6 @@ class DistributedSuitPlannerAI(DistributedObjectAI.DistributedObjectAI, SuitPlan
         if suitName is None:
             suitDeptIndex, suitTypeIndex, flags = self.air.suitInvasionManager.getInvadingCog()
             skelecog = random.choice([0, 1])
-            isVirtual = random.choice([0, 1])
             revives = random.choice([0, 1])
             waiter = False
             if suitDeptIndex is not None:

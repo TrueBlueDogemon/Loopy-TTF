@@ -1,7 +1,7 @@
 from toontown.suit.DistributedCashbotBossAI import DistributedCashbotBossAI
 from toontown.toonbase import ToontownGlobals
 from toontown.chat import ResistanceChat
-
+from toontown.suit import SuitDNA
 import random
 
 
