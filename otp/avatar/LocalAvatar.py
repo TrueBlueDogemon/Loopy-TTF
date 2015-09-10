@@ -1285,6 +1285,30 @@ def hpr(h, p, r):
     """
     base.localAvatar.setHpr(h, p, r)
 
+@magicWord(category=CATEGORY_COMMUNITY_MANAGER, types=[float, float, float])    
+def speed(value):
+    """
+    Modifies the invoker's speed. For default, use 0.
+    """
+    if value < 0:
+        return 'Invalid speed value!'
+    if value == 0:
+        base.localAvatar.ToonFowardSpeed(16.0 * ToonSpeedFactor)
+    else:
+        base.localAvatar.ToonForwardSpeed(value)
+        
+@magicWord(category=CATEGORY_COMMUNITY_MANAGER, types=[float, float, float])    
+def jump(value):
+    """
+    Modifies the invoker's jump height. For default, use 0.
+    """
+    if value < 0:
+        return 'Invalid jump value!'
+    if value == 0:
+        base.localAvatar.ToonJumpForce(24.0)
+    else:
+        base.localAvatar.ToonJumpForce(value)
+
 @magicWord(category=CATEGORY_MODERATOR)
 def keepalive():
     self = spellbook.getInvoker()

@@ -1939,11 +1939,11 @@ BossbotSkelP = 'Bossbot Skelecogs'
 LawbotSkelP = 'Lawbot Skelecogs'
 CashbotSkelP = 'Cashbot Skelecogs'
 SellbotSkelP = 'Sellbot Skelecogs'
-MegaSuitPreFix = 'Mega '
 NotSkeleRevivePostFix = ' VXR'
 SkeleRevivePostFix = ' VX'
 SkeleRevivePostFix2 = ' VX-2'
 SkeleRevivePostFix3 = ' VX-3'
+SkeleRevivePostFixMega = ' VX-Mega'
 AvatarDetailPanelOK = lOK
 AvatarDetailPanelCancel = lCancel
 AvatarDetailPanelClose = lClose
@@ -2290,7 +2290,9 @@ RewardPanelCongratsStrings = ['Yeah!',
  'Wow!',
  'Cool!',
  'Awesome!',
- 'Toon-tastic!']
+ 'Toon-tastic!',
+ 'OP',
+ 'Do want!']
 RewardPanelNewGag = 'New %(gagName)s gag for %(avName)s!'
 RewardPanelUberGag = '%(avName)s earned the %(gagName)s gag with %(exp)s experience points!'
 RewardPanelEndTrack = 'Yay! %(avName)s has reached the end of the %(gagName)s Gag Track!'
@@ -2322,6 +2324,7 @@ CheesyEffectDays = 'For the next %(time)s days, %(effectName)s%(whileIn)s.'
 CheesyEffectWhileYouAreIn = ' while you are in %s'
 CheesyEffectExceptIn = ', except in %s'
 SuitFlunky = 'Flunky'
+SuitMysterySuit = 'Mysterious Flunky'
 SuitPencilPusher = 'Pencil Pusher'
 SuitYesman = 'Yesman'
 SuitMicromanager = 'Micro\x03manager'
@@ -2353,6 +2356,7 @@ SuitBackStabber = 'Back Stabber'
 SuitSpinDoctor = 'Spin Doctor'
 SuitLegalEagle = 'Legal Eagle'
 SuitBigWig = 'Big Wig'
+SuitMysterySuitS = 'a Mysterious Flunky'
 SuitFlunkyS = 'a Flunky'
 SuitPencilPusherS = 'a Pencil Pusher'
 SuitYesmanS = 'a Yesman'
@@ -2360,7 +2364,7 @@ SuitMicromanagerS = 'a Micromanager'
 SuitDownsizerS = 'a Downsizer'
 SuitHeadHunterS = 'a Head Hunter'
 SuitCorporateRaiderS = 'a Corporate Raider'
-SuitTheBigCheeseS = 'a The Big Cheese'
+SuitTheBigCheeseS = 'a Big Cheese'
 SuitColdCallerS = 'a Cold Caller'
 SuitTelemarketerS = 'a Telemarketer'
 SuitNameDropperS = 'a Name Dropper'
@@ -2386,13 +2390,14 @@ SuitSpinDoctorS = 'a Spin Doctor'
 SuitLegalEagleS = 'a Legal Eagle'
 SuitBigWigS = 'a Big Wig'
 SuitFlunkyP = 'Flunkies'
+SuitMysterySuitP = 'Mysterious Flunkies'
 SuitPencilPusherP = 'Pencil Pushers'
 SuitYesmanP = 'Yesmen'
 SuitMicromanagerP = 'Micromanagers'
 SuitDownsizerP = 'Downsizers'
 SuitHeadHunterP = 'Head Hunters'
 SuitCorporateRaiderP = 'Corporate Raiders'
-SuitTheBigCheeseP = 'The Big Cheeses'
+SuitTheBigCheeseP = 'Big Cheeses'
 SuitColdCallerP = 'Cold Callers'
 SuitTelemarketerP = 'Telemarketers'
 SuitNameDropperP = 'Name Droppers'
@@ -5724,7 +5729,7 @@ BossBattleHowToGetPies = 'Jump up to touch the cage to get pies.'
 BossBattleHowToThrowPies = 'Press the Delete key to throw pies!'
 CagedToonYippee = 'Yippee!'
 CagedToonThankYou = "It's great to be free!\x07Thanks for all your help!\x07I am in your debt.\x07Here's my card. If you ever need a hand in battle, give a shout!\x07Just click on your SOS button."
-BrutalCagedToonThankYou = "You toons did it!\x07What a fight that was! I was actually a bit nervous for you guys.\x07Thank you for having guts to save me!.\x07Here's two of my cards. If you ever need a hand in battle, give a shout!\x07Just click on your SOS button."
+BrutalCagedToonThankYou = "You toons did it!\x07What a fight that was! I was actually a bit nervous for you guys considering how the C.E.O became the new Chairman.\x07Thank you for having guts to save me!.\x07Here's two of my cards. If you ever need a hand in battle, give a shout!\x07Just click on your SOS button."
 CagedToonLevelPromotion = "\x07Say--that V.P. Cog left behind your promotion papers.\x07I'll file them for you on the way out, so you'll get your promotion!"
 BrutalCagedToonLevelPromotion = "\x07Say--that C.E.O. Cog left behind your promotion papers.\x07I'll file them for you on the way out, so you'll get your promotion!"
 CagedToonSuitPromotion = "\x07It seems like you've reached the highest level you can for a %s.\x07You can continue upgrading your Cog suit through the disguise page in your Shticker Book.\x07Along with getting a new Cog suit, you will also get a 1 point Laff boost!"
@@ -5753,6 +5758,7 @@ CashbotBossOuttaHere = "I've got a train to catch!"
 BrutalCashbotBossOuttaHere = "Looks like we'll have to remanufacture the C.F.O!  I'm out of here!"
 ResistanceToonName = 'Mata Hairy'
 ResistanceToonCongratulations = "You did it!  Congratulations!\x07You're an asset to the Resistance!\x07Here's a special phrase you can use in a tight spot:\x07%s\x07When you say it, %s.\x07But you can only use it once, so choose that time well!"
+BrutalResistanceToonCongratulations = "You did it once and you've done it again!  Congratulations!\x07You're an real asset to the Resistance if you can bring down the C.E.O!\x07Here's a special phrase you can use in a tight spot:\x07%s\x07When you say it, %s.\x07But you can only use it once, so choose that time well!"
 ResistanceToonToonupInstructions = 'all the Toons near you will gain %s Laff points'
 ResistanceToonToonupAllInstructions = 'all the Toons near you will gain full Laff points'
 ResistanceToonMoneyInstructions = 'all the Toons near you will gain %s Jellybeans'
@@ -5785,6 +5791,7 @@ BrutalResistanceToonCraneInstructions3 = "Grab a goon with a magnet and hit the 
 ResistanceToonCraneInstructions4 = 'Once his helmet is gone, grab a disabled goon and hit him in the head!'
 BrutalResistanceToonCraneInstructions4 = "You can disable the goons by stepping on them.  This will make them easier to pick up.  Beware though, the C.E.O. can spawn bigger and stronger goons to protect him!"
 ResistanceToonGetaway = 'Eek!  Gotta run!'
+BrutalResistanceToonGetaway = 'Yikes! Good luck, Toons!'
 CashbotCraneLeave = 'Leave Crane'
 CashbotCraneAdvice = 'Use the arrow keys to move the overhead crane.'
 CashbotMagnetAdvice = 'Hold down the control key to pick things up.'
@@ -8426,6 +8433,7 @@ TipDict = {TIP_NONE: ('',),
                'If you rescue enough buildings to get a star above your head you may find your name on the blackboard in a Toon HQ.',
                'Rescued buildings are sometimes recaptured by the Cogs. The only way to keep your star is to go out and rescue more buildings!',
                'The names of your True Friends will appear in Blue.',
+               'The names of any spawned Bots will appear in solid black.',
                'See if you can collect all the fish in Toontown!',
                'Different ponds hold different fish. Try them all!',
                'When your fishing bucket is full, sell your fish to the Fishermen in the Playgrounds.',

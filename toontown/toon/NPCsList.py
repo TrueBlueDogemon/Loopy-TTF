@@ -668,4 +668,6 @@ NPCToonNames = {20000: 'Tutorial Tom',
  99006: 'Derp Ex Machina',
  99007: 'Professor Wilbur M.D.',
  99008: 'Mario',
- 99009: 'Luigi'}
+ 99009: 'Luigi',
+ 99998: 'Generic Toon A',
+ 99999: 'Generic Toon B'}

@@ -240,7 +240,7 @@ class DistributedBrutalCashbotBoss(DistributedCashbotBoss):
             Func(goon.request, 'Recovery'),
             Wait(2),
             Func(base.camera.setPosHpr, 95.4, -332.6, 4.2, 167.1, -13.2, 0),
-            Func(rToon.setChatAbsolute, TTLocalizer.ResistanceToonGetaway, ChatGlobals.CFSpeech),
+            Func(rToon.setChatAbsolute, TTLocalizer.BrutalResistanceToonGetaway, ChatGlobals.CFSpeech),
             Func(rToon.animFSM.request, 'jump'),
             Wait(1.8),
             Func(rToon.clearChat),

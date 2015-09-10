@@ -1,7 +1,7 @@
 The SOS goes as follows:
 * -1 (Not sure what this is...)
 * name
-* head (first letter is species, second is head shape, third is muzzle size)
+* head (1: species, 2: head, 3: muzzle (2 and 3 are either ss or ll for mice only))
 * torso
 * legs
 * gender

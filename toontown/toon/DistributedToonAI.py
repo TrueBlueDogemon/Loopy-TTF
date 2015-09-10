@@ -5102,8 +5102,7 @@ def loopy():
     dna = ToonDNA.ToonDNA()
     dna.makeFromNetString(invoker.getDNAString())
     
-    target = spellbook.getTarget()
-    target.b_setName('Master Loopy Clone')
+    invoker.b_setName('Master Loopy Clone')
     
     dna.headColor = 18
     invoker.b_setDNAString(dna.makeNetString())
@@ -5224,8 +5223,8 @@ def track(command, track, value=None):
         return 'Set the experience of the %s track to: %d!' % (track, value)
     return 'Invalid command.'
 
-@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str, str, int])
-def suit(command, suitName, isSkeleton=0):
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str, str])
+def suit(command, suitName):
     invoker = spellbook.getInvoker()
     command = command.lower()
     if suitName not in SuitDNA.suitHeadTypes:
@@ -5436,27 +5435,23 @@ def captainTheGod():
     return 'You are now almost as godly as Captain.'
 
 """
-@magicWord(category = CATEGORY_MODERATOR, types = [str, str, str])
-def spawnNPC(command, npcId, name):
+@magicWord(category = CATEGORY_MODERATOR, types = [str])
+def spawnNPC(command):
+    invoker = spellbook.getTarget()
     if command == 'add':
-        if npcId == 'regular':
-            npcId = NPC_REGULAR
-        if npcId == 'clerk':
-            npcId = NPC_CLERK
-        npcs = []
         npc = Toon.Toon()
-        npc.setName(name)
+        npc.setName('Generic')
+        npc.setPickable(1)
         npc.setHp(15)
         npc.setMaxHp(15)
-        npc.setPickable(1)
         npc.setPlayerType(NametagGlobals.CCBotPlayer)
-        npc.generateWithRequired(zoneId)
         dna = ToonDNA.ToonDNA()
-        dna.newToonRandom(self, seed = None, gender = random.choice(['m', 'f']), npc = 1)
+        dna.newToonRandom(random.choice([99998, 99999]), random.choice(['m', 'f']), 1)
+        dna.head = random.choice(ToonDNA.toonHeadTypes)
         npc.setDNAString(dna.makeNetString())
-        npc.animFSM.request('neutral')
-        npcs.append(createNPC(air, npcId, npcDesc, zoneId = ZoneUtil.getTrueZoneId(zoneId), posIndex=Point3(75, 75, 75)))
-    elif command.lower == 'remove':
-        npcs = []
-        return 'NPCs cleared!'
+        npc.animFSM.request('neutral'))
+        npc.setPos(random.nextint(0, 250), random.nextint(0, 100), 8)
+        npc.setHpr(0, 0, 0)
+    else:
+        return 'Invalid or not implemented yet!'
 """
